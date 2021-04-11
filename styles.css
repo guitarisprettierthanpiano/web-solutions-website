@@ -1,0 +1,181 @@
+html{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+    width: 100vw;
+    max-width: 100%;
+}
+
+body, body *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: white;
+    text-shadow: 1px 1px black;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 480px 150px auto 150px 500px 220px;
+
+}
+
+.headmain{
+    grid-row: 1;
+
+    display: grid;
+    grid-template-rows: 80px 400px;
+
+    
+    background-image: url('./images/backgroundiamge.webp');
+    background-size: 100%;
+}
+/* header */
+header{
+  grid-row: 1; 
+  display: grid;
+
+  grid-column: 40fr 60fr;
+  grid-row: auto;
+
+  background-color: rgba(255, 166, 0, 0.932);
+}
+header h3{
+    grid-column: 1;
+    display: grid;
+    align-self: center;
+
+    font-size: 30px;
+
+    margin-left: 24px;
+}
+header nav{
+    grid-column: 2;
+    display: grid;
+    align-content: center;
+    justify-content: end;
+}
+header ul li{
+    display: inline;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    
+    margin-right: 20px;
+
+    cursor: pointer;
+}
+li:hover{
+    color: orangered;
+    transform: scale(1.22);
+}
+
+
+
+/* main */
+main{
+    grid-row: 2;
+    background-color: rgba(0, 0, 0, 0.774);
+    display: grid;
+    grid-template-rows: 60fr 30fr;
+    align-items: center;
+    justify-items: center;
+
+    
+
+}
+main h1{
+    grid-row: 1;
+
+    font-size: 54px;
+    text-align: center;
+
+    align-self: flex-end;
+}
+main button{
+    grid-row: 2;
+    height: 50px;
+    width: 200px;
+
+    align-self: flex-start;
+}
+
+
+
+#grad-one{
+    grid-row: 2;
+
+    display: grid;
+    align-items: end;
+    justify-items: center;
+}
+#grad-one h1, #grad-two h1{
+    font-size: 54px;
+}
+
+
+/* section one */
+#section-one{
+    grid-row: 3;
+
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+}
+.s1-child{
+    display: grid;
+    color: black;
+    align-items: center;
+    justify-items: center;
+}
+.s1-child *{
+    color: black;
+
+    padding: 10px;
+}
+
+
+/* gradient two */
+#grad-two{
+    grid-row: 4;
+    
+    display: grid;
+    align-items: end;
+    justify-items: center;
+
+}
+#section-two{
+    grid-row: 5;
+
+    background-color: darkslategrey;
+}
+footer{
+    grid-row: 6;
+
+    background-color: forestgreen;
+}
+
+
+#grad-one, #grad-two {
+    background-color: orange;
+    background-image: 
+    repeating-linear-gradient(
+    3deg, transparent, transparent 45px, 
+    rgb(255, 255, 255) 45px, 
+    rgb(255, 255, 255) 55px);
+}
+
+img{
+    height: 90px;
+    width: 90px;
+}
