@@ -2,9 +2,8 @@ html{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    
-    width: 100vw;
-    max-width: 100%;
+    background-color: bisque;
+
 }
 
 body, body *{
@@ -17,25 +16,14 @@ body, body *{
     color: white;
     text-shadow: 1px 1px black;
 }
-.container{
+#rootcontainer{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 480px 150px auto 150px 500px 220px;
-
+    grid-template-rows: 80px auto 220px;
 }
 
-.headmain{
-    grid-row: 1;
 
-    display: grid;
-    grid-template-rows: 80px 400px;
-
-    
-    background-image: url('./images/backgroundiamge.webp');
-    background-size: 100%;
-}
 /* header */
-header{
+.header{
   grid-row: 1; 
   display: grid;
 
@@ -44,7 +32,7 @@ header{
 
   background-color: rgba(255, 166, 0, 0.932);
 }
-header h3{
+.header h3{
     grid-column: 1;
     display: grid;
     align-self: center;
@@ -53,13 +41,13 @@ header h3{
 
     margin-left: 24px;
 }
-header nav{
+.header nav{
     grid-column: 2;
     display: grid;
     align-content: center;
     justify-content: end;
 }
-header ul li{
+.header ul li{
     display: inline;
     letter-spacing: 1px;
     font-size: 20px;
@@ -69,16 +57,24 @@ header ul li{
 
     cursor: pointer;
 }
-li:hover{
+.li:hover{
     color: orangered;
     transform: scale(1.22);
 }
 
+/* home container */
+.home-container{
+    display: grid;
+    grid-template-rows: 400px 150px 500px 150px 500px;
 
+    background-color: brown;
+
+    grid-row: 2;
+}
 
 /* main */
-main{
-    grid-row: 2;
+.home-main{
+    grid-row: 1;
     background-color: rgba(0, 0, 0, 0.774);
     display: grid;
     grid-template-rows: 60fr 30fr;
@@ -86,9 +82,10 @@ main{
     justify-items: center;
 
     
-
+    background-image: url('./images/backgroundiamge.webp');
+    background-size: 100%;
 }
-main h1{
+.home-main h1{
     grid-row: 1;
 
     font-size: 54px;
@@ -96,7 +93,7 @@ main h1{
 
     align-self: flex-end;
 }
-main button{
+.home-main button{
     grid-row: 2;
     height: 50px;
     width: 200px;
@@ -132,6 +129,10 @@ main button{
 
     background-color: rgb(255, 255, 255);
 }
+#section-one img{
+    height: 90px;
+    width: 90px;
+}
 .s1-child{
     display: grid;
     color: black;
@@ -154,16 +155,28 @@ main button{
     justify-items: center;
 
 }
+
+/* section two */
 #section-two{
     grid-row: 5;
 
-    background-color: darkslategrey;
-}
-footer{
-    grid-row: 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
 
-    background-color: forestgreen;
+    height: 500px;
+
+    background-color: rgb(255, 255, 255);
 }
+#section-two img{
+    height: 90px;
+    width: 90px;
+}
+#section-two .s2-child{
+    background-color: rgba(255, 166, 0, 0.295);
+}
+
 
 
 #grad-one, #grad-two {
@@ -174,8 +187,29 @@ footer{
     rgb(255, 255, 255) 45px, 
     rgb(255, 255, 255) 55px);
 }
+/* -----end of home page ----- */
 
-img{
-    height: 90px;
-    width: 90px;
+/* footer */
+.footer {
+    grid-row: 3;
+    background-color: rgb(36, 36, 36);
+
+    height: 220px;
+    background-color: green;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer .description{
+    grid-column: 1;
+    color: cadetblue;
+}
+.footer .services{
+    grid-column: 2;
+    color: black;
+    background-color:crimson;
+}
+.footer .useful-links{
+    grid-column: 3;
+    color: black;
 }
