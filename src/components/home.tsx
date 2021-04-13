@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-function Home() {
+function Home(){
     return(
     <div className='home-container'>
 
         <div className='home-main'>
             <h1>A team of schmendriks who just copy and paste their own templates forever.</h1>
-            <button>Click Me</button>
+            <button>Launch Project</button>
         </div>
 
         <div id='grad-one'>
@@ -43,37 +43,37 @@ function Home() {
         <div id='section-two'>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
+                <h3>Website Development</h3>
+                <button>View</button>
             </div>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
+                <h3>Website Development</h3>
+                <button>View</button>
             </div>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
+                <h3>Website Development</h3>
+                <button>View</button>
             </div>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
+                <h3>Website Development</h3>
+                <button>View</button>
             </div>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
+                <h3>Website Development</h3>
+                <button>View</button>
             </div>
             <div className='s2-child'>
                 <img src='./images/img1.png' />
-                <h5>Website Development</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloribus alias facilis molestias sapiente exercitationem eligendi assumenda saepe, explicabo similique illo expedita perspiciatis natus quas iste dolorem ducimus veritatis?</p>
-            </div>
+                <h3>Website Development</h3>
+                <button>View</button>
+            </div>        
         </div>
     </div>
-    )
-}
+    );
+};
 
 export default Home;

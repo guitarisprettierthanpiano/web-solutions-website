@@ -2,12 +2,15 @@ import * as React from 'react';
 
 function Footer() {
     return (
-    <div className='.footer'>
+    <div className='footer'>
         <div className='description'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla minima porro eaque, explicabo similique. Amet sequi rem nisi inventore. Et blanditiis quo voluptatibus inventore repudiandae facere eum quasi vero?</p>
+            <h4>SWS</h4>
+            <br/>
+            <p>We design and develop the highest quality web services to professionals and businesses in the world.</p>
         </div>
         <div className='services'>
-            <h5>Services</h5>    
+            <h5>Services</h5>  
+            <br/>  
             <ul>
                 <li>Website Design and Development</li>
                 <li>Social Media Marketing (SMM)</li>
@@ -18,6 +21,7 @@ function Footer() {
         </div>
         <div className='useful-links'>
             <h5>Useful Links</h5>
+            <br/>
             <ul>
                 <li><a>About Us</a></li>
                 <li><a>Our Portfolio</a></li>

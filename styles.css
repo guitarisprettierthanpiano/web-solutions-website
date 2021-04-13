@@ -2,10 +2,8 @@ html{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    background-color: bisque;
 
 }
-
 body, body *{
     box-sizing: border-box;
     margin: 0px;
@@ -13,20 +11,48 @@ body, body *{
 
     font-family: Arial, Helvetica, sans-serif;
     
-    color: white;
-    text-shadow: 1px 1px black;
+    color: rgba(0, 0, 255, 0.7);
 }
-#rootcontainer{
+#root-container{
     display: grid;
-    grid-template-rows: 80px auto 220px;
+    grid-template-rows: repeat(3, auto);
 }
-
+p, li{
+    line-height: 150%;
+    font-weight: lighter;
+}
+button, a{
+    text-transform: uppercase;
+}
+h2, h3, h4, h5{
+    font-weight: lighter;
+}
+button{
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    transition-duration: .05s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+button:hover{
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+}
+button:active{
+    transform:translateY(1px);
+}
 
 /* header */
 .header{
   grid-row: 1; 
   display: grid;
 
+  height: 80px;
   grid-column: 40fr 60fr;
   grid-row: auto;
 
@@ -57,15 +83,54 @@ body, body *{
 
     cursor: pointer;
 }
-.li:hover{
+.header * li:hover{
     color: orangered;
     transform: scale(1.22);
 }
 
+/* footer */
+.footer {
+    grid-row: 3;
+    background-color: rgb(36, 36, 36);
+
+    border-top: 2px solid black;
+    height: 220px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer .description{
+    grid-column: 1;
+    padding: 30px;
+}
+.footer .services{
+    grid-column: 2;
+    
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.footer .useful-links{
+    grid-column: 3;
+    
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.footer * li{
+    list-style-type:square;
+}
+.footer * h4{
+    font-size: 30px;
+}
+.footer * h5{
+    font-size: 24px;
+}
+
+/* HOME PAGE */
 /* home container */
 .home-container{
     display: grid;
-    grid-template-rows: 400px 150px 500px 150px 500px;
+    grid-template-rows: 400px 150px 500px 150px 700px;
 
     background-color: brown;
 
@@ -101,8 +166,7 @@ body, body *{
     align-self: flex-start;
 }
 
-
-
+/* gradient one */
 #grad-one{
     grid-row: 2;
 
@@ -113,7 +177,6 @@ body, body *{
 #grad-one h1, #grad-two h1{
     font-size: 54px;
 }
-
 
 /* section one */
 #section-one{
@@ -145,7 +208,6 @@ body, body *{
     padding: 10px;
 }
 
-
 /* gradient two */
 #grad-two{
     grid-row: 4;
@@ -165,7 +227,7 @@ body, body *{
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
 
-    height: 500px;
+    height: 700px;
 
     background-color: rgb(255, 255, 255);
 }
@@ -177,8 +239,6 @@ body, body *{
     background-color: rgba(255, 166, 0, 0.295);
 }
 
-
-
 #grad-one, #grad-two {
     background-color: orange;
     background-image: 
@@ -189,27 +249,127 @@ body, body *{
 }
 /* -----end of home page ----- */
 
-/* footer */
-.footer {
-    grid-row: 3;
-    background-color: rgb(36, 36, 36);
-
-    height: 220px;
-    background-color: green;
-
+/* ABOUT US PAGE */
+.about-us-container{
+    grid-row: 2;
     display: grid;
+    grid-template-rows: repeat(6, auto);
+}
+
+/*about us main sect */
+.about-us-main{
+    grid-row: 1;
+}
+.about-us-main h2{
+    font-size: 36px;
+    padding-left: 24px;
+    padding-top: 20px;
+}
+.about-us-main h3{
+    font-size: 30px;
+    padding-left: 24px;
+    line-height: 150%;
+}
+.about-us-main button{
+    margin-left: 24px;
+}
+
+/*the big picture */
+.about-us-h1-1{
+    grid-row: 2;
+    display: grid;
+
+    justify-content: center;
+}
+.about-us-h1-1 h1{
+    font-size: 40px;
+    padding: 40px;
+    border-bottom: 1px solid blue;
+}
+
+/* some spiel */
+.about-us-p{
+    grid-row: 3;
+    display: grid;
+
+    justify-content: center;
+}
+.about-us-p p{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 40px;
+    line-height: 150%;
+    max-width: 1000px;
+}
+
+/*what we offer */
+.about-us-h1-2{
+    grid-row: 4;
+    display: grid;
+
+    justify-content: center;
+}
+.about-us-h1-2 h1{
+    font-size: 40px;
+    padding: 40px;
+    padding-top: 0px;
+    border-bottom: 1px solid blue;
+}
+
+/*about us services */
+.about-us-services{
+    grid-row: 5;
+    display: grid;
+    height: 600px;
+
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
 }
-.footer .description{
-    grid-column: 1;
-    color: cadetblue;
+.about-us-services div{
+    height: 300px;
 }
-.footer .services{
-    grid-column: 2;
-    color: black;
-    background-color:crimson;
+.about-us-services * p{
+    max-width: 300px;
+    text-align: center;
+    font-size: 18px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.footer .useful-links{
-    grid-column: 3;
-    color: black;
+.about-us-services * h4{
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.about-us-services * img{
+    margin-top: 30px;
+    height: 30px;
+    width: 30px;
+
+    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* about us pitch */
+.about-us-pitch{
+    grid-row: 6;
+    padding: 40px;
+
+    background-color: rgba(0, 0, 51, 0.76);
+}
+.about-us-pitch h3{
+    color: white;
+    font-size: 34px;
+}
+.about-us-pitch h4{
+    color: white;
+    font-size: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
