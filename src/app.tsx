@@ -6,7 +6,7 @@ import Home from './components/home';
 import AboutUs from './components/about-us';
 import Footer from './components/footer';
 
-function App() {
+const App: React.FC = () => {
     return(
         <HashRouter>
             <Header />
